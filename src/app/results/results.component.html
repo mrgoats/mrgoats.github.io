@@ -1,0 +1,30 @@
+<div class="content-page">
+
+  <div class="mat-elevation-z8">
+    <mat-table mat-table [dataSource]="dataSource" matSort>
+      <!-- Position Column -->
+      <ng-container matColumnDef="avatar_url">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> avatar_url </mat-header-cell>
+        <mat-cell *matCellDef="let element"> <img src={{element.avatar_url}} /> </mat-cell>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="type">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> type </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.type}} </mat-cell>
+      </ng-container>
+
+      <!-- Weight Column -->
+      <ng-container matColumnDef="login">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> username </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.login}} </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+    <mat-paginator #paginator [pageSize]="9" aria-label="Select page of users"></mat-paginator>
+
+  </div>
+
+</div>

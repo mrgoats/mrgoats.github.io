@@ -1,0 +1,18 @@
+.mat-elevation-z8 {
+  .mat-cell {
+    margin: 0.5rem 0;
+  }
+
+  img {
+    width: auto;
+    height: 10rem;
+    border-radius: 50%;
+  }
+}
+
+@media (max-width: 800px) {
+  .mat-elevation-z8 .mat-cell img {
+    width: auto;
+    height: 5rem;
+  } 
+}
